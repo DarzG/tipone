@@ -66,6 +66,7 @@
         </style>
     </head>
     <body>
+		
         <div class="flex-center position-ref full-height" style="background-color: #2d2d30" >
             <div class = "row">
 				@if (Route::has('login'))
