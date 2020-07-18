@@ -80,20 +80,42 @@
             @endif
 
             <div class="content">
-                <div class="title m-b-md">
-                    CMOS
-                </div>
+                <div id="myCarousel" class="carousel slide" data-ride="carousel">
+					<!-- Indicators -->
+					<ol class="carousel-indicators">
+					  <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+					  <li data-target="#myCarousel" data-slide-to="1"></li>
+					  <li data-target="#myCarousel" data-slide-to="2"></li>
+					</ol>
 
-                <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://vapor.laravel.com">Vapor</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
+					<!-- Wrapper for slides -->
+					<div class="carousel-inner" role="listbox">
+					  <div class="item active">
+						<img src="ny.jpg" alt="New York" width="1200" height="700">
+						<div class="carousel-caption">
+						  <h3>Control</h3>
+						  <p></p>
+						</div>      
+					  </div>
+
+					  <div class="item">
+						<img src="chicago.jpg" alt="Chicago" width="1200" height="700">
+						<div class="carousel-caption">
+						  <h3>Manage</h3>
+						  <p></p>
+						</div>      
+					  </div>
+					
+					  <div class="item">
+						<img src="la.jpg" alt="Los Angeles" width="1200" height="700">
+						<div class="carousel-caption">
+						  <h3>Operate</h3>
+						  <p></p>
+						</div>      
+					  </div>
+					</div>
+
+				</div>
             </div>
         </div>
     </body>
