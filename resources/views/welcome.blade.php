@@ -93,7 +93,7 @@
 					<!-- Wrapper for slides -->
 					<div class="carousel-inner" role="listbox">
 					  <div class="item active">
-						<img src="ny.jpg" alt="control" width="1200" height="700">
+						<img src="/img/CMS1.jpg" alt="control" >
 						<div class="carousel-caption">
 						  <h3>Control</h3>
 						  <p></p>
@@ -101,7 +101,7 @@
 					  </div>
 
 					  <div class="item">
-						<img src="chicago.jpg" alt="manage" width="1200" height="700">
+						<img src="/img/CMS2.jpg" alt="manage" >
 						<div class="carousel-caption">
 						  <h3>Manage</h3>
 						  <p></p>
@@ -109,7 +109,7 @@
 					  </div>
 					
 					  <div class="item">
-						<img src="la.jpg" alt="operate" width="1200" height="700">
+						<img src="/img/CMS3.jpg" alt="operate" >
 						<div class="carousel-caption">
 						  <h3>Operate</h3>
 						  <p></p>
