@@ -66,59 +66,61 @@
         </style>
     </head>
     <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
+        <div class="flex-center position-ref full-height" style="background-color: #2d2d30" >
+            <div class = "row">
+				@if (Route::has('login'))
+					<div class="top-right links" >
+						@auth
+							<a href="{{ url('/home') }}">Home</a>
+						@else
+							<a href="{{ route('login') }}">Login</a>
 
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
-                        @endif
-                    @endauth
-                </div>
-            @endif
-
-            <div class="content">
-                <div id="myCarousel" class="carousel slide" data-ride="carousel">
-					<!-- Indicators -->
-					<ol class="carousel-indicators">
-					  <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-					  <li data-target="#myCarousel" data-slide-to="1"></li>
-					  <li data-target="#myCarousel" data-slide-to="2"></li>
-					</ol>
-
-					<!-- Wrapper for slides -->
-					<div class="carousel-inner" role="listbox">
-					  <div class="item active">
-						<img src="/img/CMS1.jpg" alt="control" >
-						<div class="carousel-caption">
-						  <h3>Control</h3>
-						  <p></p>
-						</div>      
-					  </div>
-
-					  <div class="item">
-						<img src="/img/CMS2.jpg" alt="manage" >
-						<div class="carousel-caption">
-						  <h3>Manage</h3>
-						  <p></p>
-						</div>      
-					  </div>
-					
-					  <div class="item">
-						<img src="/img/CMS3.jpg" alt="operate" >
-						<div class="carousel-caption">
-						  <h3>Operate</h3>
-						  <p></p>
-						</div>      
-					  </div>
+							@if (Route::has('register'))
+								<a href="{{ route('register') }}">Register</a>
+							@endif
+						@endauth
 					</div>
+				@endif
+			</div>
+			<div class = "row">
+				<div class="content" >
+					<div id="myCarousel" class="carousel slide" data-ride="carousel">
+						<!-- Indicators -->
+						<ol class="carousel-indicators">
+						  <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+						  <li data-target="#myCarousel" data-slide-to="1"></li>
+						  <li data-target="#myCarousel" data-slide-to="2"></li>
+						</ol>
 
+						<!-- Wrapper for slides -->
+						<div class="carousel-inner" role="listbox">
+						  <div class="item active">
+							<img src="/img/CMS1.jpg" alt="control" >
+							<div class="carousel-caption">
+							  <h3>Control</h3>
+							  <p></p>
+							</div>      
+						  </div>
+
+						  <div class="item">
+							<img src="/img/CMS2.jpg" alt="manage" >
+							<div class="carousel-caption">
+							  <h3>Manage</h3>
+							  <p></p>
+							</div>      
+						  </div>
+						
+						  <div class="item">
+							<img src="/img/CMS3.jpg" alt="operate" >
+							<div class="carousel-caption">
+							  <h3>Operate</h3>
+							  <p></p>
+							</div>      
+						  </div>
+						</div>
+					</div>
 				</div>
-            </div>
+			</div>
         </div>
     </body>
 </html>
