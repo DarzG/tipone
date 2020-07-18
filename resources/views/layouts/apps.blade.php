@@ -52,8 +52,8 @@
 							   <li class="sidebar-brand"><a id="menu-toggle" href="#">Menu<span id="main_icon" class="glyphicon glyphicon-align-justify"></span></a></li>
 						  </ul>
 							<ul class="sidebar-nav" id="sidebar">     
-							  <li><a>Link1<span class="sub_icon glyphicon glyphicon-link"></span></a></li>
-							  <li><a>link2<span class="sub_icon glyphicon glyphicon-link"></span></a></li>
+							  <li><a><h5>Companies</h5><span class="sub_icon glyphicon glyphicon-link"></span></a></li>
+							  <li><a><h5>Employees</h5><span class="sub_icon glyphicon glyphicon-link"></span></a></li>
 							</ul>
 						  </div>
 

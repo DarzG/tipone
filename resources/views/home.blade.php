@@ -1,4 +1,4 @@
-@extends('layouts.apps')
+@extends('layouts.app')
 
 @section('content')
 <div class="container" >
@@ -25,26 +25,16 @@
 			<div>
 				<div><h1>Companies</h1></div>
 				
-				<div>
-				<div><strong>add</strong></div>
-				<div><strong>update</strong></div>
-				<div><strong>delete</strong></div>
-				</div>
 			</div>
 			
-			<div>
-				<div><h1>Emplpoyee</h1></div>
-				
-				<div>
-				<div><strong>add</strong></div>
-				<div><strong>update</strong></div>
-				<div><strong>delete</strong></div>
-				</div>
-			</div>
 			
 		</div>
-		<div class="col-9" >
-		
+		<div class="col-9 p-3" >
+			<div class="d-flex">
+				<div class ="pr-4"><strong>add</strong></div>
+				<div class ="pr-4"><strong>edit</strong></div>
+				<div class ="pr-4"><strong>delete</strong></div>
+			</div>
 		</div>
 	</div>
 </div>
