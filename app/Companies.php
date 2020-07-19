@@ -9,7 +9,7 @@ class Companies extends Model
 	protected $guarded=[];
     public function user()
 	{
-		return $this->belongsTo(Employees::class);
+		return $this->hasMany(Employees::class);
 	}
 
 }

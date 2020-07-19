@@ -26,3 +26,7 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::post('/p','CompaniesController@store');
+
+Route::get('/profile/p/{company}', 'EmployeesController@index')->name('profile.show');
+
+Route::post('/profile/p','EmployeesController@store');

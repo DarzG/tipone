@@ -41,9 +41,9 @@
 										autocomplete="name" autofocus>
 
 									@error('company_name')
-										<span class="invalid-feedback" role="alert">
-											<strong>{{ $message }}</strong>
-										</span>
+										
+										<strong>{{ $message }}</strong>
+										
 									@enderror
 								</div>
 				</div>
@@ -112,21 +112,21 @@
 		<div class="col-8" >
 			@foreach ($companies as $companies)
 				
-				<div class="row">
+				<div class="row justify-content-between align-items-baseline" >
 					<div>
 						<img src="/storage/{{$companies->image}}" >
 					</div>
 					
 					<div>
-						 <h1>{{$companies->company_name}}</h1>
+						 <h1><a href="/profile/p/{{$companies->id}}">{{$companies->company_name}}</a></h1>
 						 <h5>{{$companies->email}}</h5>
 						 <h5>{{$companies->website}}</h5>
 						 <h5>Employees</h5>
 					</div>
-					<div>
-						<a href="#">Delete</a>
-						<a href="#">Add Employee</a>
-						<a href="#">Edit</a>
+					<div >
+						<h6><a href="#">Delete</a></h6>
+						<h6><a href="#">Add Employee</a></h6>
+						<h6><a href="#">Edit</a></h6>
 						
 					</div>
 				</div>
