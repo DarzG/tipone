@@ -27,13 +27,18 @@
 				
 			</div>
 			
-			<form action="/p" enctype="multipart/form-date"	method="post">
+			<form action="/p" enctype="multipart/form-data"	method="post">
 				@csrf
 				<div class="form-group ">
 								<label for="company_name" class="col-form-label">{{ __('Company Name') }}</label>
 
 								<div class="">
-									<input id="company_name" type="text" class="form-control @error('company_name') is-invalid @enderror" name="company_name" value="{{ old('company_name') }}" required autocomplete="name" autofocus>
+									<input id="company_name" 
+										type="text" 
+										class="form-control @error('company_name') is-invalid @enderror" 
+										name="company_name" 
+										value="{{ old('company_name') }}"  
+										autocomplete="name" autofocus>
 
 									@error('company_name')
 										<span class="invalid-feedback" role="alert">
@@ -47,9 +52,31 @@
 								<label for="company_email" class="col-form-label">{{ __('E-Mail Address') }}</label>
 
 								<div class="">
-									<input id="company_email" type="text" class="form-control @error('company_email') is-invalid @enderror" name="company_email" value="{{ old('company_email') }}" required autocomplete="email">
+									<input id="company_email" 
+									type="text" class="form-control @error('company_email') is-invalid @enderror" 
+									name="company_email" 
+									value="{{ old('company_email') }}"  
+									autocomplete="email">
 
 									@error('company_email')
+										<span class="invalid-feedback" role="alert">
+											<strong>{{ $message }}</strong>
+										</span>
+									@enderror
+								</div>
+				</div>
+				
+				<div class="form-group ">
+								<label for="website" class=" col-form-label ">{{ __('website') }}</label>
+
+								<div class="">
+									<input id="website" 
+									type="text" 
+									class="form-control @error('website') is-invalid @enderror" 
+									name="website" 
+									value="{{ old('website') }}" autofocus>
+										
+									@error('website')
 										<span class="invalid-feedback" role="alert">
 											<strong>{{ $message }}</strong>
 										</span>
@@ -60,29 +87,17 @@
 				<div class="form-group">
 								<label for="image" class="col-form-label ">{{ __('logo') }}</label>
 								<div class="">
-									<input type="file" class="form-control-file" id="image" name="campany_logo">
+									<input type="file" class="form-control-file" id="image" name="image">
 									@error('image')
-													<span class="invalid-feedback" role="alert">
-														<strong>{{ $message }}</strong>
-													</span>
+													
+										<strong>{{ $message }}</strong>
+													
 									@enderror
 								</div>
 					
 				</div>
-				
-				<div class="form-group ">
-								<label for="website" class=" col-form-label ">{{ __('website') }}</label>
+				<br><br>
 
-								<div class="">
-									<input id="website" type="text" class="form-control @error('website') is-invalid @enderror" name="website" value="{{ old('website') }}" autofocus>
-										
-									@error('website')
-										<span class="invalid-feedback" role="alert">
-											<strong>{{ $message }}</strong>
-										</span>
-									@enderror
-								</div>
-				</div>
 				
 				<div class="form-group">
 								<div>
