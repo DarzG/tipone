@@ -54,7 +54,7 @@
 								<div class="">
 									<input id="company_email" 
 									type="text" class="form-control @error('company_email') is-invalid @enderror" 
-									name="company_email" 
+									name="email" 
 									value="{{ old('company_email') }}"  
 									autocomplete="email">
 
@@ -64,6 +64,19 @@
 										</span>
 									@enderror
 								</div>
+				</div>
+				
+				<div class="form-group">
+								<label for="image" class="col-form-label ">{{ __('logo') }}</label>
+								<div class="">
+									<input type="file" class="form-control-file" id="image" name="image">
+									@error('image')
+													
+										<strong>{{ $message }}</strong>
+													
+									@enderror
+								</div>
+					
 				</div>
 				
 				<div class="form-group ">
@@ -84,18 +97,7 @@
 								</div>
 				</div>
 				
-				<div class="form-group">
-								<label for="image" class="col-form-label ">{{ __('logo') }}</label>
-								<div class="">
-									<input type="file" class="form-control-file" id="image" name="image">
-									@error('image')
-													
-										<strong>{{ $message }}</strong>
-													
-									@enderror
-								</div>
-					
-				</div>
+				
 				<br><br>
 
 				

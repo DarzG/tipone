@@ -10,11 +10,14 @@ class CompaniesController extends Controller
   {
 	$data = request()->validate([
 		'company_name'=> 'required',
-		'company_email'=> ['required','email'],
+		'email'=> ['required','email'],
 		'image'=> ['required','dimensions:min_width=100,min_height=100','image'],
 		'website'=> 'required',
 		
+		
 	]);
+	
+	\App\Companies::create($data);
 	dd(request()->all());
   }
 }
