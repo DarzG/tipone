@@ -15,7 +15,7 @@ class CompaniesController extends Controller
 		'website'=> 'required',
 	]);
 	
-	dd(request('image')->store('companyLogos','public'));
+	$logoPath=request('image')->store('companyLogos','public'));
   
 	\App\Companies::create($data);
 	dd(request()->all());
