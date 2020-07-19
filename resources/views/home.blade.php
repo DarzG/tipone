@@ -21,68 +21,74 @@
     </div-->
 	
 	<div class = "row" >
-		<div class="col-4" style="border-right: 2px solid #333">
+		<div class="col-3" style="border-right: 2px solid #333">
 			<div>
 				<div><h1>Companies</h1></div>
 				
 			</div>
-			<div class="form-group row">
-                            <label for="website" class="col-md-4 col-form-label">{{ __('website') }}</label>
-
-                            <div class="">
-                                <input id="website" type="text" class="form-control @error('website') is-invalid @enderror" website="website" value="{{ old('website') }}" required autocomplete="website" autofocus>
-
-                                @error('website')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-            </div>
 			
-			<div class="form-group row">
-                            <label for="company_email" class="col-md-4 col-form-label">{{ __('E-Mail Address') }}</label>
+			<form method="POST" action="">
+				<div class="form-group ">
+								<label for="website" class="col-form-label">{{ __('Company Name') }}</label>
 
-                            <div class="">
-                                <input id="company_email" type="company_email" class="form-control @error('company_email') is-invalid @enderror" website="company_email" value="{{ old('company_email') }}" required autocomplete="company_email">
+								<div class="">
+									<input id="website" type="text" class="form-control @error('website') is-invalid @enderror" name="website" value="{{ old('company_name') }}" required autocomplete="name" autofocus>
 
-                                @error('company_email')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-            </div>
-			<div class="row">
-				<label for="image" class="col-md-4 col-form-label ">logo</label>
-				<div class="col-md-5">
-					<input type="file", class="form-control-file" id="image" name="campany_logo">
-					@error('image')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                    @enderror
+									@error('website')
+										<span class="invalid-feedback" role="alert">
+											<strong>{{ $message }}</strong>
+										</span>
+									@enderror
+								</div>
 				</div>
 				
-			</div>
-			
-			<div class="form-group row">
-                            <label for="website" class="col-md-4 col-form-label ">{{ __('website') }}</label>
+				<div class="form-group ">
+								<label for="website" class="col-form-label">{{ __('E-Mail Address') }}</label>
 
-                            <div class="col-md-6">
-                                <input id="website" type="text" class="form-control @error('website') is-invalid @enderror" website="website" value="{{ old('website') }}" required autocomplete="website" autofocus>
-									
-								@error('website')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-            </div>
-			
-			<div class="form-group row">
-				<button class="btn-primary">add company</button>
-			</div>
+								<div class="">
+									<input id="website" type="website" class="form-control @error('website') is-invalid @enderror" name="website" value="{{ old('website') }}" required autocomplete="email">
+
+									@error('website')
+										<span class="invalid-feedback" role="alert">
+											<strong>{{ $message }}</strong>
+										</span>
+									@enderror
+								</div>
+				</div>
+				
+				<div class="form-group">
+								<label for="image" class="col-form-label ">{{ __('logo') }}</label>
+								<div class="">
+									<input type="file", class="form-control-file" id="image" name="campany_logo">
+									@error('image')
+													<span class="invalid-feedback" role="alert">
+														<strong>{{ $message }}</strong>
+													</span>
+									@enderror
+								</div>
+					
+				</div>
+				
+				<div class="form-group ">
+								<label for="website" class=" col-form-label ">{{ __('website') }}</label>
+
+								<div class="">
+									<input id="website" type="text" class="form-control @error('website') is-invalid @enderror" name="website" value="{{ old('website') }}" autofocus>
+										
+									@error('website')
+										<span class="invalid-feedback" role="alert">
+											<strong>{{ $message }}</strong>
+										</span>
+									@enderror
+								</div>
+				</div>
+				
+				<div class="form-group">
+								<div>
+									<button class="btn-primary ">add company</button>
+								</div>
+				</div>
+			</form>
 			
 		</div>
 		<div class="col-8" >
