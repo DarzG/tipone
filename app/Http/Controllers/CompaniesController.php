@@ -13,10 +13,10 @@ class CompaniesController extends Controller
 		'email'=> ['required','email'],
 		'image'=> ['required','dimensions:min_width=100,min_height=100','image'],
 		'website'=> 'required',
-		
-		
 	]);
 	
+	dd(request('image')->store('companyLogos','public'));
+  
 	\App\Companies::create($data);
 	dd(request()->all());
   }
