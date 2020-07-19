@@ -15,9 +15,15 @@ class CompaniesController extends Controller
 		'website'=> 'required',
 	]);
 	
-	$logoPath=request('image')->store('companyLogos','public'));
+	$logoPath=request('image')->store('companyLogos','public');
   
-	\App\Companies::create($data);
-	dd(request()->all());
+	\App\Companies::create([
+		'company_name' => $data['company_name'],
+		'email' => $data['email'],
+		'image' => $logoPath,
+		'website' => $data['website'],
+	]);
+	
+	return redirect('/home');
   }
 }

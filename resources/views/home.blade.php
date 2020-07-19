@@ -110,12 +110,27 @@
 			
 		</div>
 		<div class="col-8" >
-			<div><h4>company1</h4><div>
-			<div><h4>company2</h4><div>
-			<div><h4>company3</h4><div>
-			<div><h4>company4</h4><div>
-			<div><h4>company5</h4><div>
-			
+			@foreach ($companies as $companies)
+				
+				<div class="row">
+					<div>
+						<img src="/storage/{{$companies->image}}" >
+					</div>
+					
+					<div>
+						 <h1>{{$companies->company_name}}</h1>
+						 <h5>{{$companies->email}}</h5>
+						 <h5>{{$companies->website}}</h5>
+						 <h5>Employees</h5>
+					</div>
+					<div>
+						<a href="#">Delete</a>
+						<a href="#">Add Employee</a>
+						<a href="#">Edit</a>
+						
+					</div>
+				</div>
+			@endforeach
 			
 		</div>
 		
