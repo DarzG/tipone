@@ -29,4 +29,6 @@ Route::post('/p','CompaniesController@store');
 
 Route::get('/profile/p/{company}', 'EmployeesController@index')->name('profile.show');
 
+Route::get('/profile/p/{employees}', 'EmployeesController@index')->name('profile.show');
+
 Route::post('/profile/p','EmployeesController@store');

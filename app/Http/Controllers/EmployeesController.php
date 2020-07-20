@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Companies;
+use App\Employees;
 class EmployeesController extends Controller
 {
     public function index($company){
@@ -15,6 +16,7 @@ class EmployeesController extends Controller
 			'company' => $company,
 		]);
 	}
+	
 
 	public function store()
   {
@@ -34,7 +36,6 @@ class EmployeesController extends Controller
 		'company_name' =>$data['company'],
 		'phone' => $data['phone'],
 	]);
-	return redirect('/home');
-  }
-  
+	return redirect()->back() ;
+	}
 }
